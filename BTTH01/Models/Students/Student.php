@@ -3,7 +3,7 @@ class Student {
     private $id;
     private $name;
     private $age;
-    private $grade
+    private $grade;
   
     public function __construct($id, $name, $age) {
       $this->id = $id;
