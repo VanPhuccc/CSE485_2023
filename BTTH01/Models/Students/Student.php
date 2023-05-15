@@ -3,11 +3,13 @@ class Student {
     private $id;
     private $name;
     private $age;
+    private $grade
   
     public function __construct($id, $name, $age) {
       $this->id = $id;
       $this->name = $name;
       $this->age = $age;
+      $this->grade = $grade;
     }
   
     public function getId() {
@@ -33,5 +35,12 @@ class Student {
     public function setAge($age) {
       $this->age = $age;
     }
+
+    public function setGrade($grade){
+        $this->grade=$grade;
+    }
+    public function getGrade() {
+        return $this->grade;
+      }
 }
 ?>
