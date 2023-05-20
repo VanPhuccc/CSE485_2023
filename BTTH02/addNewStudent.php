@@ -17,4 +17,10 @@
 <input type="submit" value="Create">
 </form>
 
-<p><?php echo $message; ?></p>
+<?php
+    if ($success = true){
+        echo "Add sucessfully";
+    }
+    else
+        echo "Add failed";
+?>
