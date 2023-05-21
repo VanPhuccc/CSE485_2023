@@ -8,4 +8,16 @@
         $statement->execute($arguments);     // Execute statement
         return $statement;                   // Return PDOStatement object
     }
+    function deleteAttendance($id){
+       try{
+            $sql = "delete from attendee where id = :id";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindparam(':id', $id);
+            $stmt->execute();
+            return true;
+        }catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+           }
+     }
 ?>
