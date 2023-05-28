@@ -52,6 +52,24 @@ class ArticleService{
             return $articles;
         }
     }
+    
+    public function updateArticle($id,$title,$summary,$content){
+        $dbconnection = new DBConnection();
+        $conn = $dbconnection->getConnection();
+        if($conn !=null)
+        {
+            $sql = "UPDATE article set title ='$title',
+                                       summary = '$summary',
+                                       content = '$content'
+                            where id = '$id' ";
+            $stmt = $conn->query($sql);
+            if($stmt){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
 }
 
 
