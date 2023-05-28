@@ -20,6 +20,23 @@ class Article{
     public function setTitle($title){
         $this->title = $title;
     }
-
+    public function getSummary(){
+        return $this->summary;
+    }
+    public function setSummary($summary){
+        $this->summary = $summary;
+    }
+    public function getContent(){
+        return $this->content;
+    }
+    public function setContent($content){
+        $this->content = $content;
+    }
+    public function getAuthorName(){
+        return $this->author_name;
+    }
+    public function setAurthorName($author_name){
+        $this->author_name = $author_name;
+    }
 }
 
